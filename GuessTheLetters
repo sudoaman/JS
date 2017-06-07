@@ -1,0 +1,33 @@
+var box1 = ['F','O','X'];
+var box2 = ['_','_','_'];
+
+function guessletter(letter) {
+	var goodguess = false;
+	var moretoguess = false;
+	for(var i = 0;i <= box1.length; i++)
+	{
+		if (box1[i] == letter)
+		{
+			box2[i] = letter;
+			goodguess = true;
+		}
+		if (box2[i] == '_')
+		{
+			moretoguess = true;
+		}
+	}
+if (goodguess) {
+	console.log ("Correct");
+	console.log(box2.join(''));
+if(!moretoguess)
+{
+	console.log("You WON");
+}
+}else 
+{
+	console.log("Not Correct");
+}
+}
+guessletter('F');
+guessletter('O');
+guessletter('X');
